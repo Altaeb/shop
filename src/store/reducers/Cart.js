@@ -1,4 +1,4 @@
-import ADD_CART from "../actions/Cart";
+import { ADD_TO_CART } from "../actions/cart";
 import CartItem from "../../models/cart-item";
 
 const initialState = {
@@ -8,16 +8,16 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ADD_CART:
+    case ADD_TO_CART:
       const addedProduct = action.product;
-      const prodPrice = action.price;
-      const prodTitle = action.Title;
+      const prodPrice = addedProduct.price;
+      const prodTitle = addedProduct.title;
 
       let updateOrNewCartItem;
 
       if (state.items[addedProduct.id]) {
         // Already have the item in the cart
-        const updateCartItem = new CartItem(
+        updateOrNewCartItem = new CartItem(
           state.items[addedProduct.id].quantity + 1,
           prodPrice,
           prodTitle,

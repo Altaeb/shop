@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import Colors from "../../constants/Colors";
-import * as cartAction from "../../store/actions/Cart";
+import * as cartAction from "../../store/actions/cart";
 
 const ProductDetailScreen = (props) => {
   const productId = props.navigation.getParam("productId");
