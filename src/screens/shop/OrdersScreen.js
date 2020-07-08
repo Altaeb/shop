@@ -20,7 +20,7 @@ const OrdersScreen = (props) => {
 OrdersScreen.navigationOptions = (navData) => {
   return {
     headerTitle: "Your Orders",
-    headerLeft: (
+    headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Menu"

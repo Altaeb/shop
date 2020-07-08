@@ -37,7 +37,7 @@ const ProductsOverviewScreen = (props) => {
 ProductsOverviewScreen.navigationOptions = (navData) => {
   return {
     headerTitle: "All Product",
-    headerLeft: (
+    headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Menu"
