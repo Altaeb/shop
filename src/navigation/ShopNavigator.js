@@ -21,7 +21,7 @@ const defaultNavOptions = {
     fontFamily: "open-sans-bold",
   },
   headerBackTitleStyle: {
-    fontFamily: "open-sans-bold",
+    fontFamily: "open-sans",
   },
   headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
 };
